@@ -1,0 +1,28 @@
+body {
+    background-color: #f8f9fa;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #0d6efd;
+    border-radius: 5px;
+}
+
+.dashboard-card {
+    transition: 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+}

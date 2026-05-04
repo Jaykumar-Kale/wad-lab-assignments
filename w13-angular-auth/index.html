@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>AngularJS Auth</title>
+
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <h2>Registration</h2>
+
+    <input ng-model="reg.name" placeholder="Name" /><br />
+    <input ng-model="reg.username" placeholder="Username" /><br />
+    <input
+      ng-model="reg.password"
+      type="password"
+      placeholder="Password"
+    /><br />
+
+    <button ng-click="register()">Register</button>
+
+    <hr />
+
+    <h2>Login</h2>
+
+    <input ng-model="login.username" placeholder="Username" /><br />
+    <input
+      ng-model="login.password"
+      type="password"
+      placeholder="Password"
+    /><br />
+
+    <button ng-click="loginUser()">Login</button>
+
+    <hr />
+
+    <h2>Profile</h2>
+
+    <div ng-if="currentUser">
+      <p>Name: {{currentUser.name}}</p>
+      <p>Username: {{currentUser.username}}</p>
+    </div>
+
+    <script>
+      var app = angular.module("myApp", []);
+
+      app.controller("myCtrl", function ($scope) {
+        $scope.users = [];
+        $scope.currentUser = null;
+
+        // REGISTER
+        $scope.register = function () {
+          $scope.users.push($scope.reg);
+          alert("Registered");
+          $scope.reg = {};
+        };
+
+        // LOGIN
+        $scope.loginUser = function () {
+          let found = $scope.users.find(
+            (u) =>
+              u.username === $scope.login.username &&
+              u.password === $scope.login.password,
+          );
+
+          if (found) {
+            $scope.currentUser = found;
+            alert("Login success");
+          } else {
+            alert("Invalid credentials");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

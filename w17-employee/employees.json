@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Jaykumar",
+    "designation": "Software Engineer",
+    "department": "IT",
+    "salary": 80000,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "name": "Rahul",
+    "designation": "Backend Developer",
+    "department": "IT",
+    "salary": 70000,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "name": "Sneha",
+    "designation": "HR Manager",
+    "department": "HR",
+    "salary": 60000,
+    "image": "https://via.placeholder.com/150"
+  }
+]

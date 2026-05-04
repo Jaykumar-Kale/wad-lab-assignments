@@ -1,0 +1,43 @@
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: darkred;
+  color: white;
+  text-align:center;
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  color: darkred;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align:center;
+  padding: 10px;
+}

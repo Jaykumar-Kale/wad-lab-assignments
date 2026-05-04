@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Product Catalog</title>
+
+    <style>
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .card {
+        border: 1px solid black;
+        padding: 10px;
+        width: 150px;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Product Catalog</h2>
+
+    <div id="products" class="container"></div>
+
+    <script>
+      fetch("http://localhost:3000/products")
+        .then((res) => res.json())
+        .then((data) => {
+          let container = document.getElementById("products");
+
+          data.forEach((p) => {
+            let div = document.createElement("div");
+            div.className = "card";
+
+            div.innerHTML = `
+            <img src="${p.image}">
+            <h4>${p.name}</h4>
+            <p>₹${p.price}</p>
+        `;
+
+            container.appendChild(div);
+          });
+        });
+    </script>
+  </body>
+</html>
